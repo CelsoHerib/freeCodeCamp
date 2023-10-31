@@ -25,11 +25,82 @@
     <main>
       <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
         <section role="region" aria-labelledby="student-info"><h2 id="student
-          ">Información</h2></section>
-        <section role="region" aria-labelledby="html-questions"><h2 id="html-questions">HTML</h2></section>
-        <section role="region" aria-labelledby="css-questions"><h2 id="css-questions">CSS</h2></section>
+          ">Información</h2>
+          <div class="info"><label for="name">Nombre: </label><input id="name" placeholder="Ingrese su Nombre" type="text" name="name"></input></div>
+          <div class="info"><label for="email">Email: </label><input id="email" placeholder="Ingrese su email" type="email" name="email"></input></div>
+          <div class="info"><label for="birth">F. de N.: </label><input id="birth" placeholder="dd/mm/aaaa" type="date" name="birth"></input></div>
+        </section>
+        <section role="region" aria-labelledby="html-questions"><h2 id="html-questions">HTML</h2>
+          <div class="question-block"><p>1</p>
+        <fieldset class="question" name="question">
+          <legend>HTML ¿es un lenguaje de programación?</legend>
+          <ul class="answers-list">
+            <li>
+              <label for="q1-a1">
+                <input type="radio" id="q1-a1" value="true" name="question1"></input>Verdadero
+              </label>
+          </li>
+          <li>
+            <label for="q1-a2">
+              <input type="radio" id="q1-a2" value="false" name="question1"></input>Falso
+            </label>
+          </li>
+        </ul>
+        </fieldset>
+</div>
+          <div class="question-block"><p>2</p>
+            <fieldset class="question" name="question">
+              <legend>¿HTML se utiliza para estructurar y desplegar una página web y sus contenidos?</legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q2-a1">
+                    <input type="radio" id="q2-a1" value="true" name="question2"></input>Verdadero
+                  </label>
+                </li>
+                <li>
+                  <label for="q2-a2">
+                    <input type="radio" id="q2-a2" value="false" name="question2"></input>Falso
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+</div>
+
+          </section>
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">CSS</h2>
+          <div class="formrow">
+            <div class="question-block">
+              <label for="question-answer">¿Cuántos tipos de CSS existen?</label>
+            </div>
+            <div class="answer">
+                <select name="answer" id="question-answer" required>
+                  <option value="">Seleccione una opción</option>
+                  <option value="yes">Si</option>
+                  <option value="no">No</option>
+                </select>
+            
+            </div>
+            <div class="question-block">
+              <label for="question">¿Qué son las ‘pseudo clases’?</label>
+            </div>
+            <div class="answer">
+            <textarea name="answer" id="question" cols="24" rows="5" placeholder="Lss pseudo clases son... "></textarea>
+            </div>
+          </div>
+
+        </section>
+            <button class="btn btn-secondary" type="button" aria-label="">Enviar</button>
       </form>
     </main>
+    <footer>
+      <address>
+       <a href="https://freecodecamp.org" target="_blank">freeCodeCamp</a><br>
+        San Francisco<br />
+        California<br />
+        USA
+      </address>
+    </footer>
 
     <script type="text/javascript" src="main.js"></script>
   </body>
