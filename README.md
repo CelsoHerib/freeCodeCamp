@@ -1,5 +1,5 @@
-<h1 align="center"></h1>
-<h3 align="center">A web developer from Argentina</h3>
+<h4 align="center">Learn basic string and array methods</h4>
+<h6 align="center">MusicPlayer</h6>
 
 - 🔭,🌱  I am currently studying and working on [freeCodeCamp](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/learn-basic-string-and-array-methods-by-building-a-music-player/step-63)
 
