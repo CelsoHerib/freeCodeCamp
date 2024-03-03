@@ -99,6 +99,7 @@ const playSong = (id) => {
   }
   userData.currentSong = song;
   playButton.classList.add("playing");
+  highlightCurrentSong();
   audio.play();
 };
 
@@ -117,6 +118,7 @@ const playNextSong = () => {
     playSong(nextSong.id);
   }
 };
+
 const playPreviousSong = () => {
   if (userData?.currentSong === null) {
     return;
@@ -126,10 +128,27 @@ const playPreviousSong = () => {
     playSong(previousSong.id);
   }
 };
+
+const setPlayerDisplay = () => {
+  const playingSong = document.getElementById("player-song-title");
+  const songArtist = document.getElementById("player-song-artist");
+  const currentTitle = userData?.currentSong?.title;
+  const currentArtist = userData?.currentSong?.artist;
+};
+
 const highlightCurrentSong = () => {
   const playlistSongElements = document.querySelectorAll(".playlist-song");
-  const songToHighlight = document.getElementById(`song-${userData?.currentSong?.id}`);
- }
+  const songToHighlight = document.getElementById(
+    `song-${userData?.currentSong?.id}`
+  );
+  playlistSongElements.forEach((songEl) => {
+    songEl.removeAttribute("aria-current");
+  });
+  if (songToHighlight) {
+    songToHighlight.setAttribute("aria-current", "true");
+  }
+};
+
 const renderSongs = (array) => {
   const songsHTML = array
     .map((song) => {
@@ -154,7 +173,7 @@ const renderSongs = (array) => {
 
 pauseButton.addEventListener("click", pauseSong);
 nextButton.addEventListener("click", playNextSong);
-previousButton.addEventListener("click",  playPreviousSong);
+previousButton.addEventListener("click", playPreviousSong);
 
 const getCurrentSongIndex = () => {
   return userData?.songs.indexOf(userData?.currentSong);
