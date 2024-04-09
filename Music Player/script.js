@@ -7,6 +7,7 @@ const nextButton = document.getElementById("next");
 const previousButton = document.getElementById("previous");
 const shuffleButton = document.getElementById("shuffle");
 
+//Creating an array to store all the songs
 const allSongs = [
   {
     id: 0,
