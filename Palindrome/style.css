@@ -101,3 +101,8 @@ label{
     align-items: center;
     justify-content: center;
 }
+
+.palindrome-definition{
+    vertical-align: middle;
+    text-align: center;
+}
