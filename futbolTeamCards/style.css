@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    
+    /* Global Styles */
+    :root{
+        --dark-grey: #0a0a23;
+        --light-grey: #f5f6f7;
+        --white: #ffffff;
+        --black: #000;
+    }
+
+    body{
+        font-family: Arial, sans-serif;
+        background-color: var(--dark-grey);
+        text-align: center;
+        padding: 10px;
+    }
+
+    .title,
+    .option-stats,
+    .team-stats,
+    footer{
+        color: var(--white);
+    }
