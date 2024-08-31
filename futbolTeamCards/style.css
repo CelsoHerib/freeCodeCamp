@@ -27,3 +27,41 @@
     footer{
         color: var(--white);
     }
+
+    .title{
+        margin: 1.3rem 0;
+    }
+
+    .team-stats{
+        display: flex;
+        justify-content: space-around;
+        margin: 1.2rem;
+        font-size: 1.3rem;
+        flex-wrap: wrap;
+    }
+
+    .options-label{
+        font-size: 1.3rem;
+    }
+
+    .cards{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .player-card{
+        background-color: var(--light-grey);
+        padding: 1.3rem;
+        margin: 1.2rem;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0);
+        width: 300px;
+    }
+
+    @media (max-width: 768px) {
+        .team-stats{
+            flex-direction: column;
+        }
+    }
